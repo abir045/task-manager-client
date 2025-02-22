@@ -25,7 +25,7 @@ const SocialLogin = () => {
 
   return (
     <div>
-      <div className="flex justify-center mt-20">
+      <div className="flex justify-center">
         <button className="btn btn-neutral" onClick={handleGoogleSignIn}>
           <FaGoogle className="mr-2" /> Login with google
         </button>

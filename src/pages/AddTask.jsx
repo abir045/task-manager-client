@@ -90,8 +90,6 @@ const AddTask = () => {
           </button>
         </form>
       </div>
-
-      <ViewTasks />
     </div>
   );
 };

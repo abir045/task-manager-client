@@ -6,7 +6,9 @@ const Home = () => {
     <div>
       <h3 className="text-center font-bold text-3xl">Task Manager</h3>
 
-      <SocialLogin />
+      <div className="mt-20">
+        <SocialLogin />
+      </div>
     </div>
   );
 };
