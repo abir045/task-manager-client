@@ -146,40 +146,44 @@ const ViewTasks = () => {
         <div className="container mx-auto px-4 py-8">
           <h2 className="text-2xl font-bold mb-6 text-center">Task Board</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* To-Do Column */}
-            <TaskColumn
-              title="To Do"
-              tasks={todoTasks}
-              category="to-do"
-              onDropTask={handleUpdateTaskStatus}
-              onMoveTask={handleMoveTask}
-              onEditTask={handleEditTask}
-              onDeleteTask={handleDeleteTask}
-            />
+          {isLoading ? (
+            <span className="loading loading-spinner loading-xl"></span>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* To-Do Column */}
+              <TaskColumn
+                title="To Do"
+                tasks={todoTasks}
+                category="to-do"
+                onDropTask={handleUpdateTaskStatus}
+                onMoveTask={handleMoveTask}
+                onEditTask={handleEditTask}
+                onDeleteTask={handleDeleteTask}
+              />
 
-            {/* In Progress Column */}
-            <TaskColumn
-              title="In Progress"
-              tasks={inProgressTasks}
-              category="in-progress"
-              onDropTask={handleUpdateTaskStatus}
-              onMoveTask={handleMoveTask}
-              onEditTask={handleEditTask}
-              onDeleteTask={handleDeleteTask}
-            />
+              {/* In Progress Column */}
+              <TaskColumn
+                title="In Progress"
+                tasks={inProgressTasks}
+                category="in-progress"
+                onDropTask={handleUpdateTaskStatus}
+                onMoveTask={handleMoveTask}
+                onEditTask={handleEditTask}
+                onDeleteTask={handleDeleteTask}
+              />
 
-            {/* Done Column */}
-            <TaskColumn
-              title="Done"
-              tasks={doneTasks}
-              category="done"
-              onDropTask={handleUpdateTaskStatus}
-              onMoveTask={handleMoveTask}
-              onEditTask={handleEditTask}
-              onDeleteTask={handleDeleteTask}
-            />
-          </div>
+              {/* Done Column */}
+              <TaskColumn
+                title="Done"
+                tasks={doneTasks}
+                category="done"
+                onDropTask={handleUpdateTaskStatus}
+                onMoveTask={handleMoveTask}
+                onEditTask={handleEditTask}
+                onDeleteTask={handleDeleteTask}
+              />
+            </div>
+          )}
         </div>
       </DndProvider>
     </div>
@@ -315,7 +319,7 @@ const TaskCard = ({
   return (
     <div
       ref={ref}
-      className={`p-4 mb-3 rounded-lg shadow ${
+      className={`p-4 mb-10 rounded-lg shadow ${
         isDragging ? "opacity-50" : "opacity-100"
       } bg-white hover:shadow-md transition-all cursor-move`}
     >

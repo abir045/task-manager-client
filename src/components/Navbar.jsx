@@ -65,13 +65,13 @@ const Navbar = () => {
           {user && user?.email ? (
             <>
               <div className="flex items-center relative ">
-                <img
+                {/* <img
                   className="w-10 rounded-full"
                   src={user?.photoURL}
                   alt=""
-                />
+                /> */}
 
-                <div className="opacity-100 hover:opacity-100 absolute right-[50%]">
+                <div className="opacity-100 hover:opacity-100 absolute right-[100%]">
                   <div className="flex  items-center">
                     <p>{user?.displayName}</p>
                     <button
