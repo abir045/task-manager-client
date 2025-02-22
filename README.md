@@ -1,6 +1,6 @@
 # Welcome the repo for Task Manager Client
 
-## This is a task manager app , where users can add,edit,delte and reorder their tasks
+## This is a task manager app where authenticated users can add, edit, delete and reorder their tasks
 
 ## Live Link:
 
