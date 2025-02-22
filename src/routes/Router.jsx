@@ -4,6 +4,7 @@ import Main from "../layout/Main";
 import Home from "../pages/Home";
 import AddTask from "../pages/AddTask";
 import ViewTasks from "../pages/ViewTasks";
+import PrivateRoute from "../Providers/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +18,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTask",
-        element: <AddTask />,
+        element: (
+          <PrivateRoute>
+            <AddTask />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/viewTasks",
-        element: <ViewTasks />,
+        element: (
+          <PrivateRoute>
+            <ViewTasks />
+          </PrivateRoute>
+        ),
       },
     ],
   },
